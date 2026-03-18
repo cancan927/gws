@@ -33,7 +33,7 @@ func (h *HTTPServer) Get(path string, handler HandleFunc) {
 }
 
 func (h *HTTPServer) Post(path string, handler HandleFunc) {
-	h.AddRoute(http.MethodGet, path, handler)
+	h.AddRoute(http.MethodPost, path, handler)
 }
 
 // ServeHTTP 处理请求的入口
