@@ -28,6 +28,13 @@ func (h *HTTPServer) AddRoute(method string, path string, handler HandleFunc) {
 	//TODO implement me
 	panic("implement me")
 }
+func (h *HTTPServer) Get(path string, handler HandleFunc) {
+	h.AddRoute(http.MethodGet, path, handler)
+}
+
+func (h *HTTPServer) Post(path string, handler HandleFunc) {
+	h.AddRoute(http.MethodGet, path, handler)
+}
 
 // ServeHTTP 处理请求的入口
 func (h *HTTPServer) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
